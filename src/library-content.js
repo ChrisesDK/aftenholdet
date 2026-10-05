@@ -78,6 +78,86 @@ export const libraryAssets = {
     'Blocks Mindstorms Motors - Run to motors at the same time to position in direction.png',
     'dark',
   ),
+  'mindstorms-afstand-maal-afstand': blockAsset(
+    'assets/library/mindstorms/blocks/afstand-maal-afstand.webp',
+    'MINDSTORMS-blokke, der reagerer, når afstandssensor A måler mindre end 15 centimeter',
+    'Afstandssensor.pptx',
+    null,
+    'Blocks Mindstorms Distance Sensor - measure distance.png',
+    'dark',
+  ),
+  'mindstorms-afstand-sensorlys': blockAsset(
+    'assets/library/mindstorms/blocks/afstand-sensorlys.webp',
+    'MINDSTORMS-blokke, der tænder afstandssensorens fire lys ét ad gangen',
+    'Afstandssensor.pptx',
+    null,
+    'Blocks Mindstorms Distance Sensor - Turn light on and off.png',
+    'dark',
+  ),
+  'mindstorms-farve-maal-farve': blockAsset(
+    'assets/library/mindstorms/blocks/farve-maal-farve.webp',
+    'MINDSTORMS-blokke, der reagerer, når farvesensor A ser rød',
+    'Farvesensor.pptx',
+    null,
+    'Blocks Mindstorms Color Sensor - Measure color.png',
+    'dark',
+  ),
+  'mindstorms-kraft-aktiver-flere-sensorer': blockAsset(
+    'assets/library/mindstorms/blocks/kraft-aktiver-flere-sensorer.webp',
+    'Udvidelsen Flere sensorer slået til i MINDSTORMS-appen',
+    'Kraftsensor.pptx',
+    null,
+    'Unlock statement block for if force sensor is pressed and variable block for how much force sensor is pressed in expansions - more sensors.png',
+    'dark',
+  ),
+  'mindstorms-kraft-er-trykket': blockAsset(
+    'assets/library/mindstorms/blocks/kraft-er-trykket.webp',
+    'MINDSTORMS-blokke, der reagerer, når kraftsensor A trykkes ind',
+    'Kraftsensor.pptx',
+    null,
+    'Blocks Mindstorms Color Sensor - Measure force pressed.png',
+    'dark',
+  ),
+  'mindstorms-motor-stop': blockAsset(
+    'assets/library/mindstorms/blocks/motor-stop.webp',
+    'MINDSTORMS-blok, der stopper motor A',
+    'Motor.pptx',
+    null,
+    'Blocks Mindstorms Motors - Stop motor.png',
+    'dark',
+  ),
+  'mindstorms-motor-laes-position': blockAsset(
+    'assets/library/mindstorms/blocks/motor-laes-position.webp',
+    'MINDSTORMS-blokke, der gemmer motor A\'s aktuelle position i en variabel',
+    'Motor.pptx',
+    null,
+    'Blocks Mindstorms Motors - Read motor position.png',
+    'dark',
+  ),
+  'mindstorms-motor-koer-sekunder': blockAsset(
+    'assets/library/mindstorms/blocks/motor-koer-sekunder.webp',
+    'MINDSTORMS-blokke, der kører motor A i fem sekunder',
+    'Motor.pptx',
+    null,
+    'Blocks Mindstorms Motors - Run motor for seconds.png',
+    'dark',
+  ),
+  'mindstorms-traadloes-send-vaerdi': blockAsset(
+    'assets/library/mindstorms/blocks/traadloes-send-vaerdi.webp',
+    'MINDSTORMS-blokke, der sender værdien Hej Verden med et trådløst hub-signal',
+    'Hub Mindstorm.pptx',
+    null,
+    'Blocks Mindstorms Wireless Communication - Send value.png',
+    'dark',
+  ),
+  'mindstorms-traadloes-modtag-vaerdi': blockAsset(
+    'assets/library/mindstorms/blocks/traadloes-modtag-vaerdi.webp',
+    'MINDSTORMS-blokke, der modtager et hub-signal og gemmer værdien i en variabel',
+    'Hub Mindstorm.pptx',
+    null,
+    'Blocks Mindstorms Wireless Communication - Receive value.png',
+    'dark',
+  ),
 };
 
 const bothPlatforms = ['spike', 'mindstorms'];
@@ -88,13 +168,13 @@ export const libraryTopics = [
     section('maal-afstand', 'Mål afstand', standardSelection(), [
       missingVariant('spike', 'blocks', 'Afstandssensor.pptx'),
       textVariant('spike', 'Afstandssensor.pptx', [4, 5]),
-      missingVariant('mindstorms', 'blocks', 'Afstandssensor.pptx'),
+      platformBlockVariant('mindstorms-afstand-maal-afstand', 'mindstorms', 'Afstandssensor.pptx'),
       textVariant('mindstorms', 'Afstandssensor.pptx', [6, 7]),
     ]),
     section('sensorlys', 'Tænd/sluk for lys', standardSelection(), [
       missingVariant('spike', 'blocks', 'Afstandssensor.pptx'),
       textVariant('spike', 'Afstandssensor.pptx', [9, 10]),
-      missingVariant('mindstorms', 'blocks', 'Afstandssensor.pptx'),
+      platformBlockVariant('mindstorms-afstand-sensorlys', 'mindstorms', 'Afstandssensor.pptx'),
       textVariant('mindstorms', 'Afstandssensor.pptx', [11, 12]),
     ]),
   ]),
@@ -103,7 +183,7 @@ export const libraryTopics = [
     section('maal-farve', 'Mål farve', standardSelection(), [
       missingVariant('spike', 'blocks', 'Farvesensor.pptx'),
       textVariant('spike', 'Farvesensor.pptx', [4, 5]),
-      missingVariant('mindstorms', 'blocks', 'Farvesensor.pptx'),
+      platformBlockVariant('mindstorms-farve-maal-farve', 'mindstorms', 'Farvesensor.pptx'),
       textVariant('mindstorms', 'Farvesensor.pptx', [6, 7]),
     ]),
   ]),
@@ -112,9 +192,10 @@ export const libraryTopics = [
     section('er-trykket', 'Er knappen trykket?', standardSelection(), [
       missingVariant('spike', 'blocks', 'Kraftsensor.pptx'),
       textVariant('spike', 'Kraftsensor.pptx', [4, 5]),
-      missingVariant('mindstorms', 'blocks', 'Kraftsensor.pptx'),
+      platformBlockVariant('mindstorms-kraft-er-trykket', 'mindstorms', 'Kraftsensor.pptx'),
       textVariant('mindstorms', 'Kraftsensor.pptx', [6, 7]),
     ]),
+    mindstormsBlockSection('aktiver-flere-sensorer', 'Aktivér Kraftsensor-blokkene', 'mindstorms-kraft-aktiver-flere-sensorer', 'Kraftsensor.pptx'),
     section('maal-kraft', 'Hvor meget er knappen trykket?', standardSelection(), [
       missingVariant('spike', 'blocks', 'Kraftsensor.pptx'),
       textVariant('spike', 'Kraftsensor.pptx', [9, 10]),
@@ -133,6 +214,9 @@ export const libraryTopics = [
       platformBlockVariant('mindstorms-motor-to-motorer', 'mindstorms', 'Motor.pptx'),
       missingVariant('mindstorms', 'text', 'Motor.pptx', [17]),
     ]),
+    mindstormsBlockSection('stop-motor', 'Stop motor', 'mindstorms-motor-stop', 'Motor.pptx'),
+    mindstormsBlockSection('laes-position', 'Læs motorens position', 'mindstorms-motor-laes-position', 'Motor.pptx'),
+    mindstormsBlockSection('koer-sekunder', 'Kør motor i X sekunder', 'mindstorms-motor-koer-sekunder', 'Motor.pptx'),
   ]),
 
   topic('vent', 'Vent', 'programlogik', 'Vent et bestemt tidsrum eller indtil noget sker.', 'Vent.pptx', 7, [
@@ -191,6 +275,8 @@ export const libraryTopics = [
   ]),
 
   topic('hub-mindstorms', 'Hub Mindstorms', 'hub', 'Materiale til LEGO Inventor Hub, fjernstyring og controllere.', 'Hub Mindstorm.pptx', 11, [
+    blocksOnlySection('send-vaerdi', 'Send en værdi trådløst', 'mindstorms-traadloes-send-vaerdi', 'mindstorms', 'Hub Mindstorm.pptx'),
+    blocksOnlySection('modtag-vaerdi', 'Modtag en værdi trådløst', 'mindstorms-traadloes-modtag-vaerdi', 'mindstorms', 'Hub Mindstorm.pptx'),
     comingSoonSection('tastatur', 'Fjernstyring med tastatur', 5),
     comingSoonSection('ps4', 'Fjernstyring med PS4-controller', 7),
     comingSoonSection('xbox', 'Fjernstyring med XBOX-controller', 9),
@@ -358,6 +444,21 @@ function motorSection(id, name, spikeSlides, mindstormsSlides, mindstormsBlockAs
     textVariant('spike', 'Motor.pptx', spikeSlides),
     platformBlockVariant(mindstormsBlockAssetId, 'mindstorms', 'Motor.pptx'),
     textVariant('mindstorms', 'Motor.pptx', mindstormsSlides),
+  ]);
+}
+
+function mindstormsBlockSection(id, name, assetId, pptx) {
+  return section(id, name, standardSelection(), [
+    missingVariant('spike', 'blocks', pptx),
+    missingVariant('spike', 'text', pptx),
+    platformBlockVariant(assetId, 'mindstorms', pptx),
+    missingVariant('mindstorms', 'text', pptx),
+  ]);
+}
+
+function blocksOnlySection(id, name, assetId, platform, pptx) {
+  return section(id, name, { platforms: [platform], codeModes: ['blocks'], fixedPlatform: platform, fixedCodeMode: 'blocks' }, [
+    platformBlockVariant(assetId, platform, pptx),
   ]);
 }
 

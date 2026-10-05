@@ -26,7 +26,11 @@ export const topicVisuals = {
     hint: 'Få flere ting til at ske samtidig.',
   },
   'hub-spike-prime': { image: 'assets/library/spike-hub.webp', hint: 'Leg med lys, lyd og knapper.' },
-  'hub-mindstorms': { image: 'assets/library/mindstorms-hub.webp', hint: 'Fjernstyr din robot.' },
+  'hub-mindstorms': {
+    image: 'assets/library/mindstorms-hub.webp',
+    platformImages: { mindstorms: darkImage('assets/library/mindstorms/cards/traadloes-kommunikation.webp') },
+    hint: 'Send værdier mellem hubs.',
+  },
 };
 
 function darkImage(src) {
